@@ -252,7 +252,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1628584587796260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 20, y: 0, z: 0}
   m_LocalScale: {x: 9, y: 9, z: 9}
   m_Children:
   - {fileID: 4459273679695776}
@@ -635,7 +635,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1469333690538380}
-  m_Text: 0,0
+  m_Text: 2,0
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -660,7 +660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d785ceb0b85b44694f77342b0a227e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 10
+  start: {fileID: 0}
+  end: {fileID: 0}
 --- !u!114 &114488275667094856
 MonoBehaviour:
   m_ObjectHideFlags: 1
