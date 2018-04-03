@@ -19,7 +19,8 @@ public class CubeEditor : MonoBehaviour {
         snapPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
 
         transform.position = new Vector3(snapPos.x, 0, snapPos.z);
-
-        textMesh.text = snapPos.x/gridSize + "," + snapPos.z/gridSize;
+        var labelText = snapPos.x / gridSize + "," + snapPos.z / gridSize;
+        textMesh.text = labelText;
+        name = "Cube (" + labelText + ")";
     }
 }
