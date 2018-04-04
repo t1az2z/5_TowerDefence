@@ -20,7 +20,6 @@ public class EnemyMovement : MonoBehaviour {
         }
     }
 
-
     void Update () {
 
 	}
