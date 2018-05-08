@@ -1,7 +1,5 @@
 fileFormatVersion: 2
-guid: d3a0318bbe5e7ae448608ddc735bd5d6
-timeCreated: 1524041397
-licenseType: Free
+guid: 9e5ae3467daf81b4495dc2290a6346cc
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -10,7 +8,7 @@ ModelImporter:
     2100000: atlas
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: Cylinder
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -35,6 +33,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
