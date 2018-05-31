@@ -1,16 +1,25 @@
 fileFormatVersion: 2
 guid: 13edadb29a671ee40827ee46e2cc9fc4
-timeCreated: 1524045870
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Camera
+    100004: Cube.001
+    100006: Lamp
     400000: //RootNode
+    400002: Camera
+    400004: Cube.001
+    400006: Lamp
+    2000000: Camera
     2100000: atlas
     2300000: //RootNode
+    2300002: Cube.001
     3300000: //RootNode
+    3300002: Cube.001
     4300000: Cube
+    4300002: Cube.001
+    10800000: Lamp
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -35,6 +44,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

@@ -6,6 +6,7 @@ public class EnemyMovement : MonoBehaviour {
 
     [SerializeField] [Tooltip("Time is seconds between enemy moves")] float timeBetweenMoves = .5f;
 
+
     void Start ()
     {
         PathFinder pathFinder = FindObjectOfType<PathFinder>();
