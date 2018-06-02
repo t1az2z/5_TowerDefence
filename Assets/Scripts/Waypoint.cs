@@ -9,7 +9,7 @@ public class Waypoint : MonoBehaviour
     const int gridSize = 10;
     public bool isExplored = false;
     public Waypoint exploredFrom;
-
+    public bool isPlaceable = true;
 
     public int GetGridSize()
     {
@@ -25,11 +25,18 @@ public class Waypoint : MonoBehaviour
             );
     }
 
-
-    //todo fix for work with new graphics
-    public void SetTopColor(Color color)
+    private void OnMouseOver()
     {
-        MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-        topMeshRenderer.material.color = color;
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (isPlaceable)
+            {
+                print(name + " is placeable");
+            }
+            else
+            {
+                print("cant place here");
+            }
+        }
     }
 }
