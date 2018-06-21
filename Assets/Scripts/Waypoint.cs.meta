@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: 7ab8a9252f1a06748b1f08d7ee4fb719
-timeCreated: 1522744630
-licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - exploredFrom: {instanceID: 0}
+  - towerPrefab: {fileID: 1938453528454770, guid: a196250f466b26848a5cd2fc28e7b85a,
+      type: 2}
+  - towerParrent: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
