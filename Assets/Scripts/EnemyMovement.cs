@@ -21,5 +21,6 @@ public class EnemyMovement : MonoBehaviour {
             transform.position = waypoint.transform.position;
             yield return new WaitForSeconds(timeBetweenMoves);
         }
+        SendMessage("SelfDestruct");
     }
 }

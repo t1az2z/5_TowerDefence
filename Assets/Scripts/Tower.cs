@@ -9,6 +9,7 @@ public class Tower : MonoBehaviour {
     [SerializeField] float shootDistance = 10f;
 
     Transform targetEnemy;
+    public Waypoint baseWaypoint;
 
 
 
@@ -74,6 +75,10 @@ public class Tower : MonoBehaviour {
         {
             LookAtEnemy(objectToPan, targetEnemy);
             Shoot(true);
+        }
+        else
+        {
+            Shoot(false);
         }
     }
 

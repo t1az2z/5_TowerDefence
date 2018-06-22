@@ -8,10 +8,12 @@ public class Enemy : MonoBehaviour {
     [SerializeField] int hp = 3;
     [SerializeField] GameObject enemyDamageEffeect;
     [SerializeField] GameObject enemyDeathEffect;
+    Base _base;
 
     private void Start()
     {
         AddBoxCollider();
+        _base = FindObjectOfType<Base>();
     }
 
     private void AddBoxCollider()
@@ -39,5 +41,14 @@ public class Enemy : MonoBehaviour {
     {
         Instantiate(enemyDeathEffect, transform.position, Quaternion.identity, fxParrent);
         Destroy(gameObject);
+    }
+
+    public void SelfDestruct()
+    {
+
+        Instantiate(enemyDeathEffect, transform.position, Quaternion.identity, fxParrent);
+        Destroy(gameObject);
+        if (_base)
+        _base.DecreaseHP();
     }
 }
