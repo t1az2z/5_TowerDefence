@@ -7,6 +7,9 @@ public class EnemySpawner : MonoBehaviour {
     [SerializeField] float secondsBetweenSpawns = 5f;
     [SerializeField] Enemy enemyPrefab;
     [SerializeField] int numberOfEnemiesToSpawn = 20;
+    [SerializeField] AudioClip enemySpawnSound;
+
+
 
     private void Start()
     {
@@ -18,6 +21,7 @@ public class EnemySpawner : MonoBehaviour {
         while(true)
         {
             Instantiate(enemyPrefab, transform.position, Quaternion.identity, transform);
+            GetComponent<AudioSource>().PlayOneShot(enemySpawnSound);
             yield return new WaitForSeconds(secondsBetweenSpawns);
         }
     }

@@ -10,8 +10,15 @@ public class Enemy : MonoBehaviour {
     [SerializeField] GameObject enemyDeathEffect;
     Base _base;
 
+    [SerializeField] AudioClip enemyTakeDamageSFX;
+    [SerializeField] AudioClip enemyDeathSFX;
+    AudioSource audioSource;
+
+
     private void Start()
     {
+
+        audioSource = GetComponent<AudioSource>();
         AddBoxCollider();
         _base = FindObjectOfType<Base>();
     }
@@ -35,18 +42,22 @@ public class Enemy : MonoBehaviour {
     {
         hp--;
         Instantiate(enemyDamageEffeect, transform.position, Quaternion.identity, fxParrent);
+        audioSource.PlayOneShot(enemyTakeDamageSFX);
     }
 
     private void EnemyDeath()
     {
         Instantiate(enemyDeathEffect, transform.position, Quaternion.identity, fxParrent);
+        AudioSource.PlayClipAtPoint(enemyDeathSFX, Camera.main.transform.position, .5f);
         Destroy(gameObject);
+
     }
 
     public void SelfDestruct()
     {
 
         Instantiate(enemyDeathEffect, transform.position, Quaternion.identity, fxParrent);
+        AudioSource.PlayClipAtPoint(enemyDeathSFX, Camera.main.transform.position, .5f);
         Destroy(gameObject);
         if (_base)
         _base.DecreaseHP();

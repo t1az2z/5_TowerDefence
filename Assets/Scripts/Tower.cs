@@ -7,8 +7,9 @@ public class Tower : MonoBehaviour {
     [SerializeField] GameObject bullets; 
     [SerializeField] Transform objectToPan;
     [SerializeField] float shootDistance = 10f;
-
+    [SerializeField] AudioClip shotSound;
     Transform targetEnemy;
+    [HideInInspector]
     public Waypoint baseWaypoint;
 
 
@@ -89,6 +90,8 @@ public class Tower : MonoBehaviour {
 
     void Shoot(bool isActive)
     {
+
         bullets.SetActive(isActive);
+
     }
 }
